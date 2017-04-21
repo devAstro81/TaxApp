@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sc="http://schemas.android.com/apk/res/com.bbs.taxapp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.bbs.widgets.BBSTextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_marginTop="15sp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_font_size" />
+
+    <ImageView
+        android:id="@+id/img_spliter"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:contentDescription="@string/app_name"
+        android:src="@color/ts_light_grey" />
+
+    <RelativeLayout
+        android:id="@+id/dialog_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="600sp"
+        android:layout_margin="30sp" >
+
+        <ListView
+            android:id="@+id/lst_actions"
+            android:layout_width="match_parent"
+            android:layout_height="600sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:overScrollMode="never"
+            android:scrollbars="none" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/hider1"
+            android:layout_width="match_parent"
+            android:layout_height="240sp"
+            android:layout_alignParentTop="true"
+            android:background="@color/grey_overlay" />
+
+        <TextView
+            android:id="@+id/hider2"
+            android:layout_width="match_parent"
+            android:layout_height="240sp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/grey_overlay" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_spliter1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:contentDescription="@string/app_name"
+        android:src="@color/ts_light_grey" />
+
+</LinearLayout>

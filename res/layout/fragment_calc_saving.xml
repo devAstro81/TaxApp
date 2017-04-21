@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/savings_content"
+        android:layout_below="@+id/header"
+        android:background="@color/calc_value_result_bg" >
+
+        <com.bbs.widgets.BBSCalculatorResult
+            android:id="@+id/wid_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5sp"
+        android:layout_above="@+id/savings_content"
+        android:background="@drawable/home_menu_shadow" />
+
+    <LinearLayout
+        android:id="@+id/savings_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="@dimen/bbs_content_padding" >
+
+        <RelativeLayout
+            android:id="@+id/initial_invest_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slide_item_margin_small"
+            android:padding="@dimen/bbs_element_padding" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/initial_invest_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/initial_investment"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/initial_invest_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/initial_invest_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_investment_amount"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/month_invest_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slide_item_margin_small"
+            android:padding="@dimen/bbs_element_padding" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/month_invest_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/monthly_investment"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/month_invest_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/month_invest_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_investment_amount"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <RelativeLayout
+                android:id="@+id/years_container"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/bbs_element_padding" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/years_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/years"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/years_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/years_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_years_amount"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/compounded_container"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/slide_item_margin_small"
+                android:layout_weight="1"
+                android:padding="@dimen/bbs_element_padding" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/compounded_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/compounded"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/compounded_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/compounded_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+
+                <ImageView
+                    android:layout_width="24sp"
+                    android:layout_height="12sp"
+                    android:layout_alignBottom="@+id/compounded_text"
+                    android:layout_alignRight="@+id/compounded_text"
+                    android:layout_alignTop="@+id/compounded_text"
+                    android:src="@drawable/picker_arrow" />
+
+                <Button
+                    android:id="@+id/btn_compounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/compounded_text"
+                    android:layout_alignLeft="@+id/compounded_text"
+                    android:layout_alignTop="@+id/compounded_text"
+                    android:layout_below="@+id/compounded_text"
+                    android:background="@color/transparent" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rate_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/slide_item_margin_small"
+            android:padding="@dimen/bbs_element_padding" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/rate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/annual_rate_of_interest"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/rate_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rate_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_rate"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_action_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/slide_item_margin_smaller"
+            android:weightSum="10" >
+
+            <View
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="0sp"
+                android:layout_height="100sp"
+                android:layout_marginRight="18sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_white_bg"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="@string/clear_all"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size" />
+
+            <Button
+                android:id="@+id/btn_calc"
+                android:layout_width="0sp"
+                android:layout_height="100sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_blue_bg"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="@string/calculate"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_font_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/slide_item_margin_medium" >
+
+    <com.bbs.widgets.BBSTextView
+        android:id="@+id/txt_cell_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/cell_check"
+        android:text="@string/cell_header"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_font_size" />
+
+    <CheckBox
+        android:id="@+id/cell_check"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/slide_item_margin_normal"
+        android:layout_marginRight="@dimen/slide_item_margin_normal"
+        android:background="@drawable/bbs_checkbox"
+        android:button="@color/transparent"
+        android:checked="false" />
+
+</RelativeLayout>

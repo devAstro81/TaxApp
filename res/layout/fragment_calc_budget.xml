@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <LinearLayout
+        android:id="@+id/results_container"
+        android:layout_width="match_parent"
+        android:layout_height="560sp"
+        android:layout_below="@+id/header"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:id="@+id/result_container"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:background="@color/calc_value_result_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/slide_item_margin_medium"
+            android:weightSum="2" >
+
+            <com.bbs.widgets.BBSCalculatorResult
+                android:id="@+id/wid_result_expenses"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.bbs.widgets.BBSCalculatorResult
+                android:id="@+id/wid_result_savings"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginLeft="@dimen/slide_item_margin_medium"
+            android:layout_marginRight="@dimen/slide_item_margin_medium"
+            android:background="@color/calc_value_result_divider" />
+
+        <LinearLayout
+            android:id="@+id/result_sub_container"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:background="@color/calc_value_result_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/slide_item_margin_medium"
+            android:paddingLeft="@dimen/slide_item_margin_medium"
+            android:weightSum="4" >
+
+            <com.bbs.widgets.BBSCalculatorSubResult
+                android:id="@+id/wid_result_mortgage"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.bbs.widgets.BBSCalculatorSubResult
+                android:id="@+id/wid_result_utilities"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.bbs.widgets.BBSCalculatorSubResult
+                android:id="@+id/wid_result_insurance"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.bbs.widgets.BBSCalculatorSubResult
+                android:id="@+id/wid_result_general"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5sp"
+        android:layout_above="@+id/content_scroll"
+        android:background="@drawable/home_menu_shadow" />
+
+    <ScrollView
+        android:id="@+id/content_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/results_container" >
+
+        <LinearLayout
+            android:id="@+id/budget_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <!-- Income Information -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/slide_menu_text_color_active"
+                android:padding="@dimen/slide_item_margin_medium" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/income_information"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_font_size_big" />
+
+                <!--
+                <ImageButton
+                    android:layout_width="@dimen/slide_item_image_size"
+                    android:layout_height="@dimen/slide_item_image_size"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/nav_plus" />
+                -->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/income_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/income_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/monthly_income"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_small" />
+
+                    <EditText
+                        android:id="@+id/income_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/income_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spouse_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/spouse_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/spouses_monthly_income"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_small" />
+
+                    <EditText
+                        android:id="@+id/spouse_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/spouse_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Mortgage and Debt -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/slide_menu_text_color_active"
+                android:padding="@dimen/slide_item_margin_medium" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/mortgage_and_debt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_font_size_big" />
+                <!--
+                <ImageButton
+                    android:layout_width="@dimen/slide_item_image_size"
+                    android:layout_height="@dimen/slide_item_image_size"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/nav_plus" />
+                -->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/house_payment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/slide_item_margin_medium" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/house_payment_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/house_payment"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/house_payment_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/house_payment_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_amount"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/auto_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/auto_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/auto_payment"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/auto_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/auto_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/auto2_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/auto2_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/auto_payment2"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/auto2_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/auto2_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/credit_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/credit_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/credit_card_payment"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/credit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/credit_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/debt_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/debt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/other_debt_payment"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/debt_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/debt_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Utilities -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/slide_menu_text_color_active"
+                android:padding="@dimen/slide_item_margin_medium" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/utilities2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_font_size_big" />
+                <!--
+                <ImageButton
+                    android:layout_width="@dimen/slide_item_image_size"
+                    android:layout_height="@dimen/slide_item_image_size"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/nav_plus" />
+                -->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/electric_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/electric_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/electric"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/electric_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/electric_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gas_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/gas_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/gas"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/gas_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/gas_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/oil_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/oil_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/oil"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/oil_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/oil_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sewer_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/sewer_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/sewer_and_water"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/sewer_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/sewer_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/garbage_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/garbage_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/garbage"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/garbage_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/garbage_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/telephone_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/telephone_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/telephone"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/telephone_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/telephone_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/cellular_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/cellular_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/cellular"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/cellular_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/cellular_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tv_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/tv_and_internet"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/tv_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Insurance -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/slide_menu_text_color_active"
+                android:padding="@dimen/slide_item_margin_medium" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/insurance2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_font_size_big" />
+                <!--
+                <ImageButton
+                    android:layout_width="@dimen/slide_item_image_size"
+                    android:layout_height="@dimen/slide_item_image_size"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/nav_plus" />
+                -->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/ins_auto_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/ins_auto_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/auto"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/ins_auto_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/ins_auto_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/life_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/life_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/life"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/life_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/life_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/home_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/home_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/home"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/home_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/home_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/health_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/health_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/health"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/health_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/health_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- General Expenses -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/slide_menu_text_color_active"
+                android:padding="@dimen/slide_item_margin_medium" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/general_expenses2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_font_size_big" />
+                <!--
+                <ImageButton
+                    android:layout_width="@dimen/slide_item_image_size"
+                    android:layout_height="@dimen/slide_item_image_size"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/nav_plus" />
+                -->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/food_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/food_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/food"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/food_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/food_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/auto_gas_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/auto_gas_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/auto_gas"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/auto_gas_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/auto_gas_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/donations_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/donations_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/donations"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/donations_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/donations_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/maintenance_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/maintenance_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/home_maintenance"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/maintenance_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/maintenance_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/bbs_content_padding"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/medical_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/medical_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/medical"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/medical_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/medical_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/child_care_container"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/bbs_element_padding" >
+
+                    <com.bbs.widgets.BBSTextView
+                        android:id="@+id/child_care_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/edittext_title_padding"
+                        android:text="@string/child_care"
+                        android:textColor="@color/slide_menu_text_color_active"
+                        android:textSize="@dimen/text_font_size_light" />
+
+                    <EditText
+                        android:id="@+id/child_care_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/child_care_title"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/drawable_edittext_underline"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/bbs_menu_text_color"
+                        android:textSize="@dimen/text_font_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/other_expenses_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/slide_item_margin_medium" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/other_expense_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/other_expenses"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/other_expenses_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/other_expense_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_amount"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <!-- Action Buttons -->
+
+            <LinearLayout
+                android:id="@+id/btn_action_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/slide_item_margin_small"
+                android:weightSum="10" >
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="0sp"
+                    android:layout_height="100sp"
+                    android:layout_marginRight="18sp"
+                    android:layout_weight="4"
+                    android:background="@drawable/btn_white_bg"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:text="@string/clear_all"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size" />
+
+                <Button
+                    android:id="@+id/btn_calc"
+                    android:layout_width="0sp"
+                    android:layout_height="100sp"
+                    android:layout_weight="4"
+                    android:background="@drawable/btn_blue_bg"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:text="@string/calculate"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_font_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

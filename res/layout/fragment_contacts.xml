@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.bbs.widgets.BBSContact
+                android:id="@+id/contact1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/slide_item_margin_smaller" >
+            </com.bbs.widgets.BBSContact>
+
+            <com.bbs.widgets.BBSContact
+                android:id="@+id/contact2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.bbs.widgets.BBSContact>
+
+            <com.bbs.widgets.BBSContact
+                android:id="@+id/contact3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.bbs.widgets.BBSContact>
+
+            <com.bbs.widgets.BBSContact
+                android:id="@+id/contact4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.bbs.widgets.BBSContact>
+
+            <com.bbs.widgets.BBSContact
+                android:id="@+id/contact5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.bbs.widgets.BBSContact>
+
+            <com.bbs.widgets.BBSContact
+                android:id="@+id/contact6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/slide_item_margin_smaller" >
+            </com.bbs.widgets.BBSContact>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/social_divider" />
+
+            <RelativeLayout
+                android:id="@+id/social_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50sp"
+                android:layout_marginTop="50sp"
+                android:paddingLeft="50sp"
+                android:paddingRight="50sp" >
+
+                <ImageView
+                    android:id="@+id/ico_facebook"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ico_facebook" />
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/txt_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80sp"
+                    android:layout_toRightOf="@+id/ico_facebook"
+                    android:text="@string/like_us_on_facebook"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/social_twitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:paddingLeft="50sp"
+                android:paddingRight="50sp" >
+
+                <ImageView
+                    android:id="@+id/ico_twitter"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ico_twitter" />
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/txt_twitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80sp"
+                    android:layout_toRightOf="@+id/ico_twitter"
+                    android:text="@string/follow_us_on_twitter"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btn_website"
+                    android:layout_width="300sp"
+                    android:layout_height="100sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="85sp"
+                    android:layout_marginTop="@dimen/slide_item_margin_medium"
+                    android:background="@drawable/btn_white_bg"
+                    android:gravity="center"
+                    android:text="@string/visit_bbx_tax"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size" />
+
+                <Button
+                    android:id="@+id/btn_website_logic"
+                    android:layout_width="300sp"
+                    android:layout_height="100sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="85sp"
+                    android:layout_marginTop="@dimen/slide_item_margin_medium"
+                    android:background="@drawable/btn_white_bg"
+                    android:gravity="center"
+                    android:text="@string/visit_tax_logic"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_feedback"
+                android:layout_width="200sp"
+                android:layout_height="85sp"
+                android:layout_gravity="right"
+                android:layout_marginRight="50sp"
+                android:layout_marginTop="@dimen/slide_item_margin_small"
+                android:layout_marginBottom="@dimen/slide_item_margin_small"
+                android:background="@drawable/btn_blue_bg"
+                android:gravity="center"
+                android:text="@string/feedback"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_font_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

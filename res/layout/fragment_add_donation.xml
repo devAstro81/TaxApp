@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <RelativeLayout
+        android:id="@+id/donation_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:padding="@dimen/bbs_content_padding" >
+
+        <RelativeLayout
+            android:id="@+id/donation_amount_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/damount_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/donation_amount"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/damount_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/damount_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_donation_amount"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/donation_name_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/donation_amount_container"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/dname_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/donation_name"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/dname_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/dname_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_donation_name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/donation_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/donation_name_container"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/ddate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/date"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/ddate_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ddate_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:focusable="false"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+            
+            <ImageView
+                android:layout_width="24sp"
+                android:layout_height="12sp"
+                android:src="@drawable/picker_arrow"
+                android:layout_alignBottom="@+id/ddate_text"
+                android:layout_alignRight="@+id/ddate_text"
+                android:layout_alignTop="@+id/ddate_text" />
+
+            <Button
+                android:id="@+id/btn_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ddate_text"
+                android:layout_alignLeft="@+id/ddate_text"
+                android:layout_alignTop="@+id/ddate_text"
+                android:layout_below="@+id/ddate_text"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

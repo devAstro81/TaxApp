@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/slide_menu_back"
+    android:paddingBottom="@dimen/slide_item_margin_normal" >
+
+    <RelativeLayout
+        android:id="@+id/logo_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/slide_logo_size"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/side_menu_bg" >
+
+        <ImageView
+            android:id="@+id/img_icon_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/slide_logo_padding"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/side_menu_logo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/home_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/logo_container"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:layout_marginTop="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <ImageView
+            android:id="@+id/img_icon_home"
+            android:layout_width="@dimen/slide_item_image_size"
+            android:layout_height="@dimen/slide_item_image_size"
+            android:layout_marginRight="@dimen/slide_item_margin_big"
+            android:background="@drawable/drawable_side_home"
+            android:contentDescription="@string/app_name" />
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/home"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/calculators_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/home_container"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <ImageView
+            android:id="@+id/img_icon_calculators"
+            android:layout_width="@dimen/slide_item_image_size"
+            android:layout_height="@dimen/slide_item_image_size"
+            android:layout_marginRight="@dimen/slide_item_margin_big"
+            android:background="@drawable/drawable_side_calculators"
+            android:contentDescription="@string/app_name" />
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_calculators"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/calculators"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trackers_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/calculators_container"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <ImageView
+            android:id="@+id/img_icon_trackers"
+            android:layout_width="@dimen/slide_item_image_size"
+            android:layout_height="@dimen/slide_item_image_size"
+            android:layout_marginRight="@dimen/slide_item_margin_big"
+            android:background="@drawable/drawable_side_trackers"
+            android:contentDescription="@string/app_name" />
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_trackers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/trackers"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/taxpc_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/trackers_container"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <ImageView
+            android:id="@+id/img_icon_taxpc"
+            android:layout_width="@dimen/slide_item_image_size"
+            android:layout_height="@dimen/slide_item_image_size_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/slide_item_margin_big"
+            android:background="@drawable/drawable_side_taxpc"
+            android:contentDescription="@string/app_name" />
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_taxpc"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/slide_item_image_size"
+            android:gravity="center_vertical"
+            android:text="@string/taxpc"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mydocs_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/taxpc_container"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <ImageView
+            android:id="@+id/img_icon_mydocs"
+            android:layout_width="@dimen/slide_item_image_size"
+            android:layout_height="@dimen/slide_item_image_size"
+            android:layout_marginRight="@dimen/slide_item_margin_big"
+            android:background="@drawable/drawable_side_mydocs"
+            android:contentDescription="@string/app_name" />
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_mydocs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/mydocs"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contacts_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/mydocs_container"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <ImageView
+            android:id="@+id/img_icon_contacts"
+            android:layout_width="@dimen/slide_item_image_size"
+            android:layout_height="@dimen/slide_item_image_size"
+            android:layout_marginRight="@dimen/slide_item_margin_big"
+            android:background="@drawable/drawable_side_contacts"
+            android:contentDescription="@string/app_name" />
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/contacts"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5sp"
+        android:layout_above="@+id/aboutus_container"
+        android:background="@drawable/home_menu_shadow" />
+
+    <LinearLayout
+        android:id="@+id/aboutus_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/legaldisc_container"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_help"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/about_us"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/legaldisc_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/privacy_container"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_legaldisc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/legal_disclaimer"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size"
+            android:typeface="monospace" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/privacy_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/slide_item_margin_small"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/txt_label_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/slide_menu_text_color"
+            android:textSize="@dimen/text_font_size"
+            android:typeface="normal" />
+    </LinearLayout>
+
+</RelativeLayout>

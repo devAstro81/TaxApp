@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <RelativeLayout
+        android:id="@+id/charge_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:padding="@dimen/bbs_content_padding" >
+
+        <RelativeLayout
+            android:id="@+id/charge_amount_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/camount_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/charge_amount"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/camount_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/camount_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_charge_amount"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/charge_name_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/charge_amount_container"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/cname_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/charge_name"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/cname_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/cname_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_charge_name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/charge_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/charge_name_container"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/cdate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/date"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/cdate_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/cdate_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:focusable="false"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+            
+            <ImageView
+                android:layout_width="24sp"
+                android:layout_height="12sp"
+                android:src="@drawable/picker_arrow"
+                android:layout_alignBottom="@+id/cdate_text"
+                android:layout_alignRight="@+id/cdate_text"
+                android:layout_alignTop="@+id/cdate_text" />
+
+            <Button
+                android:id="@+id/btn_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/cdate_text"
+                android:layout_alignLeft="@+id/cdate_text"
+                android:layout_alignTop="@+id/cdate_text"
+                android:layout_below="@+id/cdate_text"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

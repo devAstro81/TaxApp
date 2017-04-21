@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <RelativeLayout
+        android:id="@+id/doc_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:padding="@dimen/slide_item_margin_medium" >
+
+        <RelativeLayout
+            android:id="@+id/doc_img_container"
+            android:layout_width="match_parent"
+            android:layout_height="500sp"
+            android:background="@drawable/btn_white_bg" >
+
+            <ImageView
+                android:id="@+id/img_doc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sample_doc" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_action_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doc_img_container"
+            android:orientation="horizontal"
+            android:padding="@dimen/slide_item_margin_medium"
+            android:weightSum="10" >
+
+            <View
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_preview"
+                android:layout_width="0sp"
+                android:layout_height="100sp"
+                android:layout_marginRight="18sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_white_bg"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="@string/preview"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="0sp"
+                android:layout_height="100sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_blue_bg"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_font_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/calc_value_result_divider" />
+
+    <com.bbs.widgets.BBSTextView
+        android:id="@+id/txt_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/divider"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/slide_item_margin_medium"
+        android:layout_marginBottom="-15sp"
+        android:text="@string/cell_header"
+        android:textColor="@color/bbs_menu_list_subtext"
+        android:textSize="@dimen/text_font_size_light" />
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/img_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/slide_item_text_size"
+        android:layout_alignTop="@+id/txt_result"
+        android:layout_marginTop="40sp"
+        android:layout_toLeftOf="@+id/txt_result"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ico_money" />
+
+    <com.bbs.widgets.BBSTextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="150sp"
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/slide_item_margin_smaller"
+        android:paddingRight="@dimen/slide_item_margin_smaller"
+        android:text="0.00"
+        android:gravity="center_vertical"
+        android:textColor="@color/calc_value_result"
+        android:textSize="@dimen/text_font_size_huge" />
+
+    <com.bbs.widgets.BBSTextView
+        android:id="@+id/txt_result_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_result"
+        android:layout_marginTop="-20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="time required\nto meet goal"
+        android:textColor="@color/calc_value_result"
+        android:textSize="@dimen/text_font_size_big" />
+
+</RelativeLayout>

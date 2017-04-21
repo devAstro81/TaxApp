@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header" >
+
+        <RelativeLayout
+            android:id="@+id/mileage_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:padding="@dimen/bbs_content_padding" >
+
+            <RelativeLayout
+                android:id="@+id/mileage_bamount_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bbs_element_padding"
+                android:padding="@dimen/slide_item_margin_smaller" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/bamount_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/mileage_bamount"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/bamount_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/bamount_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_mileage_amount"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mileage_eamount_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mileage_bamount_container"
+                android:layout_marginBottom="@dimen/bbs_element_padding"
+                android:padding="@dimen/slide_item_margin_smaller" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/eamount_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/mileage_eamount"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/eamount_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/eamount_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_mileage_amount"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mileage_reason_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mileage_eamount_container"
+                android:layout_marginBottom="@dimen/bbs_element_padding"
+                android:padding="@dimen/slide_item_margin_smaller" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/reason_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/reason"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/reason_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/reason_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_reason"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mileage_date_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mileage_reason_container"
+                android:layout_marginBottom="@dimen/bbs_element_padding"
+                android:padding="@dimen/slide_item_margin_smaller" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/mdate_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/date"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/mdate_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/mdate_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+
+                <ImageView
+                    android:layout_width="24sp"
+                    android:layout_height="12sp"
+                    android:layout_alignBottom="@+id/mdate_text"
+                    android:layout_alignRight="@+id/mdate_text"
+                    android:layout_alignTop="@+id/mdate_text"
+                    android:src="@drawable/picker_arrow" />
+
+                <Button
+                    android:id="@+id/btn_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/mdate_text"
+                    android:layout_alignLeft="@+id/mdate_text"
+                    android:layout_alignTop="@+id/mdate_text"
+                    android:layout_below="@+id/mdate_text"
+                    android:background="@color/transparent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mileage_carmake_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mileage_date_container"
+                android:layout_marginBottom="@dimen/bbs_element_padding"
+                android:padding="@dimen/slide_item_margin_smaller" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/carmake_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/car_make"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/carmake_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/carmake_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_make"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mileage_carmodel_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mileage_carmake_container"
+                android:layout_marginBottom="@dimen/bbs_element_padding"
+                android:padding="@dimen/slide_item_margin_smaller" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/carmodel_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/car_model"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/carmodel_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/carmodel_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_model"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mileage_caryear_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mileage_carmodel_container"
+                android:layout_marginBottom="@dimen/bbs_element_padding"
+                android:padding="@dimen/slide_item_margin_smaller" >
+
+                <com.bbs.widgets.BBSTextView
+                    android:id="@+id/caryear_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/edittext_title_padding"
+                    android:text="@string/car_year"
+                    android:textColor="@color/slide_menu_text_color_active"
+                    android:textSize="@dimen/text_font_size_light" />
+
+                <EditText
+                    android:id="@+id/caryear_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/caryear_title"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawable_edittext_underline"
+                    android:hint="@string/enter_year"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/bbs_menu_text_color"
+                    android:textSize="@dimen/text_font_size_big" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

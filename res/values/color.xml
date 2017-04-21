@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+	<color name="white">#FFFFFF</color>
+	<color name="yellow">#FFFF00</color>
+	<color name="fuchsia">#FF00FF</color>
+	<color name="red">#FF0000</color>
+	<color name="silver">#C0C0C0</color>
+	<color name="gray">#808080</color>
+	<color name="olive">#808000</color>
+	<color name="purple">#800080</color>
+	<color name="maroon">#800000</color>
+	<color name="aqua">#00FFFF</color>
+	<color name="lime">#00FF00</color>
+	<color name="teal">#008080</color>
+	<color name="green">#008000</color>
+	<color name="blue">#0000FF</color>
+	<color name="navy">#000080</color>
+	<color name="black">#000000</color>
+	
+	<color name="grey_overlay">#C0FFFFFF</color>
+	
+	<color name="ts_green">#FF3DAB7A</color>
+	<color name="ts_red">#FFC0392B</color>
+	<color name="ts_grey">#FFBDC5C7</color>
+	<color name="ts_light_grey">#FFECF0F1</color>
+	
+	<color name="cirlce_green">#FF3DAB7A</color>
+	<color name="cirlce_red">#FFC0392B</color>
+	<color name="cirlce_yellow">#FFF39C12</color>
+	
+	
+	<color name="slide_menu_back">#f0f4f5</color>
+	<color name="slide_menu_text_color">#444444</color>
+	<color name="slide_menu_text_color_active">#03a9f4</color>
+	<color name="bbs_menu_text_color">#212121</color>
+	
+	<color name="ts_background_standard">#FFECF0F1</color>
+	<color name="button_text_color1">#FFFFFF</color>
+	
+	<color name="bbs_input_bar">#e0e0e0</color>
+	<color name="bbs_menu_list_subtext">#666666</color>
+	
+	<color name="contact_divider">#f0f0f0</color>
+	<color name="social_divider">#c2c2c2</color>
+	<color name="calc_value_result_bg">#f3f4f5</color>
+	<color name="calc_value_result">#9a9a9a</color>
+	<color name="calc_value_result_divider">#b9b9b9</color>
+	<color name="bbs_disabled_element">#dddddd</color>
+	<color name="bbs_hint_color">#bdbdbd</color>
+	
+</resources>

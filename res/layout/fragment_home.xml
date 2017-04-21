@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <RelativeLayout
+        android:id="@+id/logo_container"
+        android:layout_width="match_parent"
+        android:layout_height="800sp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/home_logo_bg"
+        android:padding="35sp" >
+
+        <ImageView
+            android:id="@+id/img_homeicon_logo"
+            android:layout_width="480sp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_logo" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5sp"
+        android:layout_above="@+id/lst_home"
+        android:background="@drawable/home_menu_shadow" />
+
+    <ListView
+        android:id="@+id/lst_home"
+        android:paddingTop="@dimen/slide_item_margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0sp"
+        android:layout_marginBottom="@dimen/slide_item_margin_big"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white" />
+
+</RelativeLayout>

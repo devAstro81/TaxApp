@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+	<dimen name="slidingmenu_offset">130sp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">20sp</dimen>
+    
+    <dimen name="slide_logo_size">345sp</dimen>
+    
+    <dimen name="slide_item_margin_smaller">10sp</dimen>
+    <dimen name="slide_item_margin_small">20sp</dimen>
+    <dimen name="slide_item_margin_normal">28sp</dimen>
+    <dimen name="slide_item_margin_medium">35sp</dimen>
+    <dimen name="slide_item_margin_big">90sp</dimen>
+    
+    <dimen name="slide_item_image_size">45sp</dimen>
+    <dimen name="slide_item_image_size_width">65sp</dimen>
+    <dimen name="slide_item_image_size_height">30sp</dimen>
+    <dimen name="slide_item_text_size">40sp</dimen>
+    
+    <dimen name="slide_logo_padding">45sp</dimen>
+    
+    <dimen name="button_padding">15sp</dimen>
+    
+    <dimen name="text_font_size_small">28sp</dimen>
+    <dimen name="text_font_size_light">30.8sp</dimen>
+    <dimen name="text_font_size">33.6sp</dimen>
+    <dimen name="text_font_size_big">39.2sp</dimen>
+    <dimen name="text_font_size_bigger">42sp</dimen>
+    <dimen name="text_font_size_ext_big">56sp</dimen>
+    <dimen name="text_font_size_large">80sp</dimen>
+    <dimen name="text_font_size_huge">120sp</dimen>
+    
+    <dimen name="fragment_header_height">125sp</dimen>
+    
+    <dimen name="home_item_height">105sp</dimen>
+    <dimen name="cell_header_height">50sp</dimen>
+    <dimen name="bbs_content_padding">20sp</dimen>
+    <dimen name="edittext_title_padding">18sp</dimen>
+    <dimen name="photo_icon_width">135sp</dimen>
+    
+    <dimen name="bbs_element_padding">15sp</dimen>
+
+</resources>

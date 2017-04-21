@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-7sp"
+        layout="@layout/navigation_header" />
+
+    <RelativeLayout
+        android:id="@+id/take_picture_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:padding="@dimen/slide_item_margin_normal" >
+
+        <ImageView
+            android:id="@+id/btn_take_photo"
+            android:layout_width="@dimen/photo_icon_width"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:layout_height="@dimen/photo_icon_width"
+            android:scaleType="fitXY"
+            android:src="@drawable/ico_photo" />
+
+        <com.bbs.widgets.BBSTextView
+            android:id="@+id/take_picture_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_take_photo"
+            android:padding="@dimen/slide_item_margin_normal"
+            android:text="@string/take_picture_rep"
+            android:textColor="@color/slide_menu_text_color_active"
+            android:textSize="@dimen/text_font_size_bigger" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divide_view"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@+id/take_picture_container"
+        android:background="@color/bbs_input_bar" />
+
+    <RelativeLayout
+        android:id="@+id/receipt_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divide_view"
+        android:padding="@dimen/bbs_content_padding" >
+
+        <RelativeLayout
+            android:id="@+id/receipt_amount_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/ramount_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/receipt_amount"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/ramount_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ramount_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_receipt_amount"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/receipt_name_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/receipt_amount_container"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/rname_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/receipt_name"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/rname_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rname_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_receipt_name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/receipt_cat_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/receipt_name_container"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/rcat_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/receipt_category"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/rcat_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rcat_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:hint="@string/enter_category_name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/receipt_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/receipt_cat_container"
+            android:layout_marginBottom="@dimen/bbs_element_padding"
+            android:padding="@dimen/slide_item_margin_small" >
+
+            <com.bbs.widgets.BBSTextView
+                android:id="@+id/rdate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/edittext_title_padding"
+                android:text="@string/date"
+                android:textColor="@color/slide_menu_text_color_active"
+                android:textSize="@dimen/text_font_size_light" />
+
+            <EditText
+                android:id="@+id/rdate_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rdate_title"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_edittext_underline"
+                android:focusable="false"
+                android:singleLine="true"
+                android:textColor="@color/bbs_menu_text_color"
+                android:textSize="@dimen/text_font_size_big" />
+
+            <ImageView
+                android:layout_width="24sp"
+                android:layout_height="12sp"
+                android:layout_alignBottom="@+id/rdate_text"
+                android:layout_alignRight="@+id/rdate_text"
+                android:layout_alignTop="@+id/rdate_text"
+                android:src="@drawable/picker_arrow" />
+
+            <Button
+                android:id="@+id/btn_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rdate_text"
+                android:layout_alignLeft="@+id/rdate_text"
+                android:layout_alignTop="@+id/rdate_text"
+                android:layout_below="@+id/rdate_text"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

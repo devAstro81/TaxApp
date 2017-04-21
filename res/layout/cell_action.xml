@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <TextView
+        android:id="@+id/height"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="120sp"/>
+    
+    <com.bbs.widgets.BBSTextView
+        android:id="@+id/txt_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textSize="@dimen/text_font_size_big" />
+    
+</RelativeLayout>

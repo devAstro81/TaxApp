@@ -1,0 +1,366 @@
+[
+    {
+    	"f_id" : "1",
+    	"f_name":"Personal Information",
+    	"f_data" : [
+	        {
+	        	"f_id" : "0",
+	        	"f_text" : "Your Social Security Number",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "1",
+	        	"f_text" : "Your spouses full name and social security number",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "2",
+	        	"f_text" : "Amount of any alimony paid and ex-spouses social security number",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "3",
+	        	"f_text" : "Add your past three years tax return(s). Your Tax Professional can check them from accuracy",
+	        	"f_value" : "0"
+	        }
+    	]
+    },
+    {
+    	"f_id" : "2",
+    	"f_name" : "Dependents",
+    	"f_data" : [
+	        {
+	        	"f_id" : "4",
+	        	"f_text" : "Dates of birth and social security number",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "5",
+	        	"f_text" : "Childcare records (including the provider's ID number) if applicable",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "6",
+	        	"f_text" : "Approximate income of other audits in your home (not spouse, if you're filing joinly)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "7",
+	        	"f_text" : "Form 8332, copies of your divorce decree, or other documents showing that your ex-spouse is releasing their right to claim a child to you",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    
+    {
+    	"f_id" : "3",
+    	"f_name" : "Education Payments",
+    	"f_data": [
+	        {
+	        	"f_id" : "8",
+	        	"f_text" : "Bills from the educational institution or anything else that itemizes what you paid or received loans for versus what was coverd by scholarship or other financial aid",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "9",
+	        	"f_text" : "Form 1098-T and 1998-E, if you received them",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "10",
+	        	"f_text" : "Scholarship and fellowships",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    {
+    	"f_id" : "4",
+    	"f_name" : "Employee Information",
+    	"f_data": [
+	        {
+	        	"f_id" : "11",
+	        	"f_text" : "Forms W-2",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    {
+    	"f_id" : "5",
+    	"f_name" : "Self-Employment Information",
+    	"f_data": [
+	        {
+	        	"f_id" : "12",
+	        	"f_text" : "Forms 1099-MISC, Schedules K-1, income records to verify amounts unreported on 1099s",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "13",
+	        	"f_text" : "Records of all expenses - check registers or credit card statements, and receipts",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "14",
+	        	"f_text" : "Business-use asset information (cost, date placed in service, etc.) for depreciation",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "15",
+	        	"f_text" : "Office in home information, if applicable",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    
+    {
+    	"f_id" : "5",
+    	"f_name" : "Vehicle Information",
+    	"f_data": [
+	        {
+	        	"f_id" : "16",
+	        	"f_text" : "Total miles driven for the year (or beginning/ending odometer readings)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "17",
+	        	"f_text" : "Total business miles driven for the year (other than commuting)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "18",
+	        	"f_text" : "Amount of parking and tolls paid",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "19",
+	        	"f_text" : "If you want to claim actual expenses, receipts or totals for gas, car wash, licenses, personal property tax, lease or interest expense, etc.",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    {
+    	"f_id" : "6",
+    	"f_name" : "Rental Income",
+    	"f_data": [
+	        {
+	        	"f_id" : "20",
+	        	"f_text" : "Records of income and expenses",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "21",
+	        	"f_text" : "Rental asset information (cost, data placed in service, etc.) for depreciation",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    {
+    	"f_id" : "7",
+    	"f_name" : "Retirement Income",
+    	"f_data": [
+	        {
+	        	"f_id" : "22",
+	        	"f_text" : "Pension/IRA/annuity income (1099-R)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "23",
+	        	"f_text" : "Social security/RRB income (1099-SSA, RRB-1099)",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    {
+    	"f_id" : "8",
+    	"f_name" : "Savings and Investments",
+    	"f_data": [
+	        {
+	        	"f_id" : "24",
+	        	"f_text" : "Interest, dividend income (1099-INT, 1099-OID, 1099-DIV)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "25",
+	        	"f_text" : "Income from sales of stock or other property(1099-B, 1099-S)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "26",
+	        	"f_text" : "Dates of acquisition and records for your cost or other basis in property you sold",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    
+    {
+		"f_id" : "9",
+    	"f_name" : "Other Income",
+    	"f_data": [
+			{
+	        	"f_id" : "27",
+	        	"f_text" : "Unemployment, state tax refund (1099-G)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "28",
+	        	"f_text" : "Gambling income (W-2G or records showing income, as well as expense records)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "29",
+	        	"f_text" : "Amount of any alimony received and ex-spouse's name",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "30",
+	        	"f_text" : "Health care reimbursements (1099-SA or 1099-LTC)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "31",
+	        	"f_text" : "Jury duty records",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "32",
+	        	"f_text" : "Hobby income and expenses",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "33",
+	        	"f_text" : "Prizes and awards",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "34",
+	        	"f_text" : "Other 1099",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+        
+    {
+    	"f_id" : "10",
+    	"f_name" : "Itemizing Deduction",
+    	"f_data": [
+	        {
+	        	"f_id" : "35",
+	        	"f_text" : "Forms 1098 or other mortgage statements",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "36",
+	        	"f_text" : "Amount of state/local income tax paid (other than wage withholding), or amount of state and local sales tax paid",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "37",
+	        	"f_text" : "Real estate and personal property",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "38",
+	        	"f_text" : "HUD statement showing closing data of home purchases",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "39",
+	        	"f_text" : "Cash amounts donated to houses of worship, schools, other charitable organizations",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "40",
+	        	"f_text" : "Records of non-cash charitable donations",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "41",
+	        	"f_text" : "Amounts paid for healthcare insurance and to doctors, dentists, hospitals",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "42",
+	        	"f_text" : "Amounts of miles driven for charitable or medical purposes",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "43",
+	        	"f_text" : "Expenses related to your investments",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "44",
+	        	"f_text" : "Amount paid for preparation of your previous year tax return",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "45",
+	        	"f_text" : "Employment-related expenses (dues, tools, publications, uniform cost and cleaning, travel)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "46",
+	        	"f_text" : "Job hunting expenses",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+    
+    {
+    	"f_id" : "11",
+    	"f_name" : "IRA Information",
+    	"f_data": [
+	    	{
+	        	"f_id" : "47",
+	        	"f_text" : "Amount contributed for tax year (and current year, if applicable)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "48",
+	        	"f_text" : "Traditional IRA basis",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "49",
+	        	"f_text" : "Value of IRAs on Dec. 31",
+	        	"f_value" : "0"
+	        }
+	    ]
+	},
+        
+    {
+    	"f_id" : "12",
+    	"f_name" : "Affected by federally declared disasters",
+    	"f_data": [
+	        {
+	        	"f_id" : "50",
+	        	"f_text" : "City/county you lived/worked/had property in",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "51",
+	        	"f_text" : "Records to support property losses (appraisal, clean up costs, etc.)",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "52",
+	        	"f_text" : "Records of rebuilding/repair costs",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "53",
+	        	"f_text" : "Insurance reimbursements/claims to be paid",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "54",
+	        	"f_text" : "FEMA assistance information",
+	        	"f_value" : "0"
+	        },
+	        {
+	        	"f_id" : "55",
+	        	"f_text" : "Check FEMA site to see if my county qualifies for individual assistance",
+	        	"f_value" : "0"
+	        }
+	    ]
+	}
+]
